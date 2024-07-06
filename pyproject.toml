@@ -1,0 +1,12 @@
+[project]
+# Basic project metadata
+name = "BCV Rate Scraper"
+description = "Scripts that scrapes USD and EUR values from the BCV website (Banco Central de Venezuela) and saves them to a file."
+version = "0.1.0"
+authors = [
+  { name="Camilo Perez", email="camilop15.cp@gmail.com" },
+]
+requires-python = ">=3.7"
+
+# Dependencies
+dependencies = ["xlrd", "beautifulsoup4"]
