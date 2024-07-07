@@ -26,7 +26,7 @@ from typing import Optional, Tuple
 
 from bs4 import BeautifulSoup
 
-from config import BCV_URL, LOG_FILE, HISTORY_FILE, NOTIFICATION_ENABLED
+from .config import BCV_URL, LOG_FILE, HISTORY_FILE, NOTIFICATION_ENABLED
 
 # from constants import BCV_URL, LOG_FILE, HISTORY_FILE
 

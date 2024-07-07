@@ -59,17 +59,17 @@ Note: currently notifications of new currency values found with `web_scrap.py` a
 To run the scripts standalone from the root directory, use the following commands:
 
 ```bash
-python src/web_scrap.py
+python python -m bcv_scrapper.web_scrap
 ```
 
 ```bash
-python src/excel_scrap.py
+python python -m bcv_scrapper.excel_scrap
 ```
 
 **Note:** the `web_scrap.py` can have an optional argument to run the script, which will add a value to the log file, this can be used to differentiate between runs from different contexts. for example :
 
 ```bash
-python src/web_scrap.py auto
+python -m bcv_scrapper.web_scrap auto
 ```
 
 Will generate this entry in the log
@@ -80,13 +80,7 @@ Will generate this entry in the log
 
 ### Running with cron
 
-To run the scripts with cron, you can add the following lines to your crontab file:
-
-```text
-*/30 15-16 * * 1-5 python /absolute/path/to/project/src/web_scrap.py
-```
-
-Or using the provided `script.sh` bash script:
+To run the scripts with cron, using the provided `script.sh` bash script, you can add the following lines to your crontab file
 
 ```text
 */30 15-16 * * 1-5 /absolute/path/to/project/script.sh

@@ -17,7 +17,7 @@ from datetime import datetime
 
 import xlrd
 
-from config import XLS_DIR, XLS_FILE, RENAME_FILES_ENABLED
+from .config import XLS_DIR, XLS_FILE, RENAME_FILES_ENABLED
 
 
 def rename_files(directory: str):
