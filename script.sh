@@ -10,6 +10,6 @@ cd $fullpath
 
 source "./venv/bin/activate"
 
-python -m bcv_scrapper.web_scrap auto
+python -m bcv_scraper.web_scrap auto
 
 deactivate

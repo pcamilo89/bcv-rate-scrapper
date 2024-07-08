@@ -1,4 +1,4 @@
-# BCV Rate Scrapper
+# BCV Rate scraper
 
 This project is a set of scripts to scrape currency values from the Banco Central de Venezuela (BCV) website.
 
@@ -59,17 +59,17 @@ Note: currently notifications of new currency values found with `web_scrap.py` a
 To run the scripts standalone from the root directory, use the following commands:
 
 ```bash
-python python -m bcv_scrapper.web_scrap
+python python -m bcv_scraper.web_scrap
 ```
 
 ```bash
-python python -m bcv_scrapper.excel_scrap
+python python -m bcv_scraper.excel_scrap
 ```
 
 **Note:** the `web_scrap.py` can have an optional argument to run the script, which will add a value to the log file, this can be used to differentiate between runs from different contexts. for example :
 
 ```bash
-python -m bcv_scrapper.web_scrap auto
+python -m bcv_scraper.web_scrap auto
 ```
 
 Will generate this entry in the log
