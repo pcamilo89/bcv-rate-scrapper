@@ -1,5 +1,7 @@
 # BCV Rate scraper
 
+This README is also available in [Spanish/Español](README.es.md).
+
 This project is a set of scripts to scrape currency values from the Banco Central de Venezuela (BCV) website.
 
 The scripts are:
@@ -72,7 +74,7 @@ python python -m bcv_scraper.excel_scrap
 python -m bcv_scraper.web_scrap auto
 ```
 
-Will generate this entry in the log
+Will generate this entry in the log:
 
 ```text
 2024-07-03 15:30:00 auto
