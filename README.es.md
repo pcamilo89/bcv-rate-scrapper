@@ -10,6 +10,14 @@ Los scripts son:
 
 - `excel_scrap.py`: Este script extrae los valores de USD y EUR de los archivos xls en la página web del BCV y los guarda en un archivo. También renombra los archivos en la carpeta.
 
+## Motivación
+
+Actualmente en el sitio web, los valores históricos se almacenan en archivos Excel xls, separados por trimestres. Cada archivo tiene un día diferente en una pestaña independiente, donde el nombre de la pestaña es la fecha de publicación y cada pestaña contiene una lista de valores de moneda para el día siguiente. Para obtener el valor del día actual, debe visitar el sitio web alrededor de las 3:30 p.m. o más tarde para obtener el valor más reciente.
+
+El objetivo de este proyecto es facilitar la búsqueda de valores de moneda pasados y actuales a partir de los datos en el sitio web. Convierte esos datos en un archivo de texto local simple donde cada línea tiene la fecha y los valores de moneda, eliminando la necesidad de visitar el sitio web. Para ello, deberá descargar los archivos xls del sitio web la primera vez para obtener valores pasados hasta un punto deseado en el tiempo. Luego, puede configurar un trabajo cron para actualizar los valores diarios automáticamente y, opcionalmente, recibir una notificación cuando se obtengan nuevos valores.
+
+Este proyecto también se integra bien con cualquier otra aplicación que necesite utilizar valores históricos de moneda.
+
 ## Instalación
 
 ### Instrucciones de instalación

@@ -2,13 +2,21 @@
 
 This README is also available in [Spanish/Español](README.es.md).
 
-This project is a set of scripts to scrape currency values from the Banco Central de Venezuela (BCV) website.
+This project has a set of scripts to scrape currency values from the Banco Central de Venezuela (BCV) website.
 
 The scripts are:
 
 - `web_scrap.py`: This script scrapes the USD and EUR values from the BCV website and saves them to a file. It also logs the scraping operations to a log file and shows a desktop notification when the values are successfully scraped.
 
 - `excel_scrap.py`: This script scrapes USD and EUR values from the xls files in the BCV website and saves them to a file. It also renames the files in the directory.
+
+## Motivation
+
+Currently on the website, the historical values are stored in excel xls files, separated by trimesters, and on each file each day is a different tab, the name of the tab is the date of publication, and each tab has a list of currency values for a the next day. For the current day value you have to visit the website at around 03:30pm or later to get the latest value.
+
+This project goal is to make it easier to search past and current currency values from the data on the website converting it into a simple local text file where each line has the date and the currency values, and eliminating the need to visit the website. For this you will have to download the xls files from the website the first time to get past values to a desired point in time, and after this you can set a cron job to update daily values automatically and optionally get a notification when new values are obtained.
+
+This project also integrates well with any other application that needs to use historical currency values.
 
 ## Installation
 
