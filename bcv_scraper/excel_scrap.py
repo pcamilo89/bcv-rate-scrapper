@@ -125,7 +125,7 @@ def process_file(file_name: str):
     return data
 
 
-def process_directory(directory: str, output_file: str):
+def process_directory(directory: str):
     """
     Processes all files in a directory and writes the results to an output file.
 
@@ -141,6 +141,17 @@ def process_directory(directory: str, output_file: str):
         data.extend(process_file(directory + source_name))
     data.sort()
 
+    return data
+
+
+def write_to_file(output_file: str, data: list[str]):
+    """
+    Writes the data to an output file.
+
+    Args:
+        output_file (str): The output file to write the data to.
+        data (list[str]): The data to write to the file.
+    """
     with open(output_file, "w", encoding="utf-8") as file:
         for line in data:
             file.write(f"{line}\n")
@@ -152,7 +163,8 @@ def main():
     """
     if RENAME_FILES_ENABLED:
         rename_files(XLS_DIR)
-    process_directory(XLS_DIR, XLS_FILE)
+    data = process_directory(XLS_DIR)
+    write_to_file(XLS_FILE, data)
 
 
 if __name__ == "__main__":
